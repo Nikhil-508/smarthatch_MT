@@ -17,7 +17,6 @@ const mongoose = require('mongoose')
       type : String
     },
 
-  
     department : [{
       type : mongoose.Schema.ObjectId,
       ref:'departments',

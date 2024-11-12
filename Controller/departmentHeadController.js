@@ -15,11 +15,11 @@ const sendRequest = async(req,res)=>{
     } catch (error) {
         res.status(500).json({message : "send reqst error"})
     }
-    
 }
 
 
 const requestApproval = async(req,res) => {
+
     try {
         const id = req.params.id
         console.log(id,"iddd");
@@ -43,6 +43,7 @@ const requestApproval = async(req,res) => {
 
 
 const getApproval = async(req,res) => {
+    
     try {
         const getApprovalRequest = await userModel.aggregate([
             {$match : {"departmentHead" : true}},
